@@ -1,5 +1,4 @@
 public abstract class Car {
-tesrdfsfsasdf
     private Location location;
     private int minutesLeft;
     private boolean isPaying;
