@@ -1,6 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * @author      327278, 331048, 335364 & 343991
+ * @version     01-04-2016
+ */
+
 public class SimulatorView extends JFrame {
     private CarParkView carParkView;
     private int numberOfFloors;
