@@ -1,5 +1,6 @@
-import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
 
 /**
  * @author      327278, 331048, 335364 & 343991
@@ -12,6 +13,10 @@ public class SimulatorView extends JFrame {
     private int numberOfRows;
     private int numberOfPlaces;
     private Car[][][] cars;
+    private JButton button1;
+    private JButton button2;
+    private JLabel label;
+
 
     public SimulatorView(int numberOfFloors, int numberOfRows, int numberOfPlaces) {
         this.numberOfFloors = numberOfFloors;
@@ -21,15 +26,32 @@ public class SimulatorView extends JFrame {
         
         carParkView = new CarParkView();
 
+        button1 = new JButton("Run 1 time");
+        button2 = new JButton("Run 100 times");
+        label = new JLabel("Test bericht");
+
+        event e = new event();
+        button1.addActionListener(e);
+
         Container contentPane = getContentPane();
         //contentPane.add(stepLabel, BorderLayout.NORTH);
         contentPane.add(carParkView, BorderLayout.CENTER);
+        contentPane.add(button1,BorderLayout.NORTH);
+        contentPane.add(button2,BorderLayout.SOUTH);
         //contentPane.add(population, BorderLayout.SOUTH);
+
         pack();
         setVisible(true);
 
         updateView();
     }
+
+    public class event implements ActionListener {
+        public void actionPerformed(ActionEvent e){
+            add(label);
+        }
+    }
+
 
     public void updateView() {
         carParkView.updateView();
