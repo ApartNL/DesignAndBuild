@@ -30,8 +30,11 @@ public class SimulatorView extends JFrame {
         button2 = new JButton("Run 100 times");
         label = new JLabel("Test bericht");
 
-        event e = new event();
-        button1.addActionListener(e);
+        event a = new event();
+        button1.addActionListener(a);
+
+        event b = new event();
+        button2.addActionListener(b);
 
         Container contentPane = getContentPane();
         //contentPane.add(stepLabel, BorderLayout.NORTH);
