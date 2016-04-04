@@ -32,8 +32,20 @@ public class Simulator {
         simulatorView = new SimulatorView(3, 6, 30);
     }
 
-    public void run() {
-        for (int i = 0; i < 10000; i++) {
+    public void hundredtick() {
+        for (int i = 0; i < 101; i++) {
+            tick();
+        }
+    }
+
+    public void singletick() {
+        for (int i = 0; i < 2; i++) {
+            tick();
+        }
+    }
+
+   public void run() {
+    for (int i = 0; i < 10000; i++) {
             tick();
         }
     }
