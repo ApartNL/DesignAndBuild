@@ -51,7 +51,7 @@ public class SimulatorView extends JFrame {
 
     public class event implements ActionListener {
         public void actionPerformed(ActionEvent e){
-            add(label);
+            Simulator.singletick();
         }
     }
 

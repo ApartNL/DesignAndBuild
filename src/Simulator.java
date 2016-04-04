@@ -12,33 +12,33 @@ public class Simulator {
     private CarQueue exitCarQueue;
     private SimulatorView simulatorView;
 
-    private int day = 0;
-    private int hour = 0;
-    private int minute = 0;
+    private static int day = 0;
+    private static int hour = 0;
+    private static int minute = 0;
 
-    private int tickPause = 100;
+    private static int tickPause = 100;
 
-    int weekDayArrivals= 50; // average number of arriving cars per hour
-    int weekendArrivals = 90; // average number of arriving cars per hour
+    private static int weekDayArrivals= 50; // average number of arriving cars per hour
+    private static int weekendArrivals = 90; // average number of arriving cars per hour
 
-    int enterSpeed = 3; // number of cars that can enter per minute
-    int paymentSpeed = 10; // number of cars that can pay per minute
-    int exitSpeed = 9; // number of cars that can leave per minute
+    private static int enterSpeed = 3; // number of cars that can enter per minute
+    private static int paymentSpeed = 10; // number of cars that can pay per minute
+    private static int exitSpeed = 9; // number of cars that can leave per minute
 
     public Simulator() {
-        entranceCarQueue = new CarQueue();
+       entranceCarQueue = new CarQueue();
         paymentCarQueue = new CarQueue();
         exitCarQueue = new CarQueue();
         simulatorView = new SimulatorView(3, 6, 30);
     }
 
-    public void hundredtick() {
+    public static void hundredtick() {
         for (int i = 0; i < 101; i++) {
             tick();
         }
     }
 
-    public void singletick() {
+    public static void singletick() {
         for (int i = 0; i < 2; i++) {
             tick();
         }
@@ -50,7 +50,7 @@ public class Simulator {
         }
     }
 
-    private void tick() {
+    public static void tick() {
         // Advance the time by one minute.
         minute++;
         while (minute > 59) {
@@ -141,4 +141,5 @@ public class Simulator {
             e.printStackTrace();
         }
     }
+
 }
