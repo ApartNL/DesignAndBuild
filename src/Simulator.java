@@ -13,6 +13,7 @@ public class Simulator {
     private CarQueue paymentCarQueue;
     private CarQueue exitCarQueue;
     private SimulatorView simulatorView;
+    private ParkingPass parkingPass;
 
 
 
@@ -28,6 +29,8 @@ public class Simulator {
     private int enterSpeed = 3; // number of cars that can enter per minute
     private int paymentSpeed = 10; // number of cars that can pay per minute
     private int exitSpeed = 9; // number of cars that can leave per minute
+
+    private boolean parkingpass;
 
     public Simulator() {
         entranceCarQueue = new CarQueue();
@@ -58,6 +61,17 @@ public class Simulator {
         for (int i = 0; i < 10000; i++) {
             tick();
         }
+    }
+
+    /**
+     * Checked of customer een parkingpass heeft of niet.
+     * @return
+     */
+    public boolean getParkingPass(){
+        if (parkingpass == true){
+            Car car = exitCarQueue.removeCar();
+        }
+        return parkingpass;
     }
 
     public void tick() {

@@ -7,6 +7,7 @@ public abstract class Car {
     private Location location;
     private int minutesLeft;
     private boolean isPaying;
+    private boolean ParkingPass;
 
     /**
      * Constructor for objects of class Car
@@ -62,6 +63,12 @@ public abstract class Car {
     public void setIsPaying(boolean isPaying) {
         this.isPaying = isPaying;
     }
+
+    /**
+     * Method that checks if car has a parkingpass.
+     * @param ParkingPass
+     */
+  //  public boolean getParkingPass() { return ParkingPass; }
 
     /**
      * Method to decrease the time a parked Car has remaining.
