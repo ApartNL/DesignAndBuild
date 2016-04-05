@@ -34,7 +34,7 @@ public class SimulatorView extends JFrame {
         event a = new event();
         button1.addActionListener(a);
 
-        event b = new event();
+        event2 b = new event2();
         button2.addActionListener(b);
 
         Container contentPane = getContentPane();
