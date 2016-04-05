@@ -32,13 +32,13 @@ public class Simulator {
         simulatorView = new SimulatorView(3, 6, 30, this);
     }
 
-    public static void hundredtick() {
+    public void hundredtick() {
         for (int i = 0; i < 101; i++) {
             tick();
         }
     }
 
-    public static void singletick() {
+    public void singletick() {
         for (int i = 0; i < 2; i++) {
             tick();
         }
@@ -50,7 +50,7 @@ public class Simulator {
         }
     }
 
-    public static void tick() {
+    public void tick() {
         // Advance the time by one minute.
         minute++;
         while (minute > 59) {
