@@ -39,10 +39,8 @@ public class Simulator {
     }
 
     public void singletick() {
-        for (int i = 0; i < 2; i++) {
             tick();
         }
-    }
 
     public void run() {
         for (int i = 0; i < 10000; i++) {
