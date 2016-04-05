@@ -51,8 +51,15 @@ public class SimulatorView extends JFrame {
     }
 
     public class event implements ActionListener {
-        public void actionPerformed(ActionEvent e){
+        public void actionPerformed(ActionEvent a){
             sim.singletick();
+        }
+    }
+
+
+    public class event2 implements ActionListener {
+        public void actionPerformed(ActionEvent b){
+            sim.hundredtick();
         }
     }
 
