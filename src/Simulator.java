@@ -5,12 +5,16 @@ import java.util.Random;
  * @version     01-04-2016
  */
 
+
+
 public class Simulator {
 
     private CarQueue entranceCarQueue;
     private CarQueue paymentCarQueue;
     private CarQueue exitCarQueue;
     private SimulatorView simulatorView;
+
+
 
     private int day = 0;
     private int hour = 0;
@@ -32,10 +36,18 @@ public class Simulator {
         simulatorView = new SimulatorView(3, 6, 30, this);
     }
 
+
+
     public void hundredtick() {
-        for (int i = 0; i < 101; i++) {
-            tick();
-        }
+        new Thread() {
+            public void run() {
+                for (int i = 0; i < 101; i++) {
+
+                    tick();
+
+                }
+            }
+        }.start();
     }
 
     public void singletick() {

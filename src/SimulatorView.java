@@ -59,7 +59,9 @@ public class SimulatorView extends JFrame {
 
     public class event2 implements ActionListener {
         public void actionPerformed(ActionEvent b){
+            Thread queryThread = new Thread(); {
             sim.hundredtick();
+                }
         }
     }
 
