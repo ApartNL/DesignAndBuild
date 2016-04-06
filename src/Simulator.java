@@ -13,7 +13,7 @@ public class Simulator extends Car {
     private CarQueue paymentCarQueue;
     private CarQueue exitCarQueue;
     private SimulatorView simulatorView;
-    private ParkPass parkpass;
+
 
 
 
@@ -30,7 +30,7 @@ public class Simulator extends Car {
     private int paymentSpeed = 10; // number of cars that can pay per minute
     private int exitSpeed = 9; // number of cars that can leave per minute
 
-    private boolean parkingpass;
+
 
     public Simulator() {
         entranceCarQueue = new CarQueue();
@@ -63,16 +63,6 @@ public class Simulator extends Car {
         }
     }
 
-    /**
-     * Checked of customer een parkingpass heeft of niet.
-     * @return
-     */
-    public boolean getParkingPass(){
-        if (parkingpass == true){
-            Car car = exitCarQueue.removeCar();
-        }
-        return parkingpass;
-    }
 
     public void tick() {
         // Advance the time by one minute.
@@ -105,8 +95,15 @@ public class Simulator extends Car {
 
         // Add the cars to the back of the queue.
         for (int i = 0; i < numberOfCarsPerMinute; i++) {
-            Car car = new AdHocCar();
+            Car car ;
+            if(random.nextDouble() <= 0.3){
+                car = new ParkPass();
 
+            }
+            else{
+                car = new AdHocCar();
+
+            }
             entranceCarQueue.addCar(car);
         }
 

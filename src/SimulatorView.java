@@ -17,7 +17,7 @@ public class SimulatorView extends JFrame {
     private JButton button2;
     private JLabel label;
     private Simulator sim;
-    private Car cr;
+
 
     public SimulatorView(int numberOfFloors, int numberOfRows, int numberOfPlaces, Simulator sim) {
         this.numberOfFloors = numberOfFloors;
@@ -262,15 +262,14 @@ public class SimulatorView extends JFrame {
                             color = Color.white;
                         } else if(car instanceof AdHocCar && car.getIsPaying() == true)
                         {
-                            color = Color.red;
-                        } else if (car instanceof AdHocCar  == true){
+                            color = Color.orange;
+                        } else if (car instanceof ParkPass){
                             color = Color.blue;
                         } else {
-                            color = Color.black;
+                            color = Color.red;
                         }
 
 
-                                //(ParkPass.isPass ? Color.blue : Car.isPaying ?  Color.red: Color.black;   /*: isReservation == true ? Color.green*/;
                         drawPlace(graphics, location, color);
                     }
                 }
