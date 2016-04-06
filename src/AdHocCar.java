@@ -16,7 +16,5 @@
 public class AdHocCar extends Car {
 
     public AdHocCar() {
-        setIsBlue(isPass);
-        setIsPaying(isPaying);
     }
 }
