@@ -3,7 +3,7 @@
  * @version     01-04-2016
  */
 
-public abstract class Car extends ParkPass {
+public abstract class Car {
     private Location location;
     private int minutesLeft;
     public static boolean isPaying;

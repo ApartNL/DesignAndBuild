@@ -256,12 +256,14 @@ public class SimulatorView extends JFrame {
                     for(int place = 0; place < getNumberOfPlaces(); place++) {
                         Location location = new Location(floor, row, place);
                         Car car = getCarAt(location);
-                        Color color; if(car == null) {
+                        Color color;
+
+                        if(car == null) {
                             color = Color.white;
                         } else if(car instanceof AdHocCar && car.getIsPaying() == true)
                         {
                             color = Color.red;
-                        } else if (car instanceof ParkPass){
+                        } else if (car instanceof AdHocCar  == true){
                             color = Color.blue;
                         } else {
                             color = Color.black;
