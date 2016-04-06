@@ -1,3 +1,5 @@
+package src;
+
 /**
  * @author      327278, 331048, 335364 & 343991
  * @version     01-04-2016
@@ -6,15 +8,12 @@
 public abstract class Car {
     private Location location;
     private int minutesLeft;
-    public static boolean isPaying;
-    public static boolean isBlue;
+    private boolean isPaying;
 
     /**
      * Constructor for objects of class Car
      */
     public Car() {
-
-
 
     }
 
@@ -64,11 +63,6 @@ public abstract class Car {
      */
     public void setIsPaying(boolean isPaying) {
         this.isPaying = isPaying;
-    }
-
-
-    public void setIsBlue(boolean isBlue) {
-        this.isBlue = isBlue;
     }
 
     /**

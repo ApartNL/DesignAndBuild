@@ -1,3 +1,5 @@
+package src;
+
 import java.util.Random;
 
 /**
@@ -7,13 +9,12 @@ import java.util.Random;
 
 
 
-public class Simulator extends Car {
+public class Simulator {
 
     private CarQueue entranceCarQueue;
     private CarQueue paymentCarQueue;
     private CarQueue exitCarQueue;
     private SimulatorView simulatorView;
-
 
 
 
@@ -30,8 +31,6 @@ public class Simulator extends Car {
     private int paymentSpeed = 10; // number of cars that can pay per minute
     private int exitSpeed = 9; // number of cars that can leave per minute
 
-
-
     public Simulator() {
         entranceCarQueue = new CarQueue();
         paymentCarQueue = new CarQueue();
@@ -40,7 +39,7 @@ public class Simulator extends Car {
     }
 
 
-    //method to run the simulation hundred steps
+
     public void hundredtick() {
         new Thread() {
             public void run() {
@@ -52,17 +51,16 @@ public class Simulator extends Car {
             }
         }.start();
     }
-    //method to run the simulation 1 step
+
     public void singletick() {
-            tick();
-        }
+        tick();
+    }
 
     public void run() {
         for (int i = 0; i < 10000; i++) {
             tick();
         }
     }
-
 
     public void tick() {
         // Advance the time by one minute.
@@ -81,8 +79,6 @@ public class Simulator extends Car {
 
         Random random = new Random();
 
-
-
         // Get the average number of cars that arrive per hour.
         int averageNumberOfCarsPerHour = day < 5
                 ? weekDayArrivals
@@ -95,14 +91,11 @@ public class Simulator extends Car {
 
         // Add the cars to the back of the queue.
         for (int i = 0; i < numberOfCarsPerMinute; i++) {
-            Car car ;
-            if(random.nextDouble() <= 0.3){
+            Car car;
+            if (random.nextDouble() <= 0.3){
                 car = new ParkPass();
-
-            }
-            else{
-                car = new AdHocCar();
-
+            } else{
+               car = new AdHocCar();
             }
             entranceCarQueue.addCar(car);
         }

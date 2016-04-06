@@ -1,6 +1,9 @@
-import java.awt.*;
-import java.awt.event.*;
+package src;
+
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * @author      327278, 331048, 335364 & 343991
@@ -17,7 +20,6 @@ public class SimulatorView extends JFrame {
     private JButton button2;
     private JLabel label;
     private Simulator sim;
-
 
     public SimulatorView(int numberOfFloors, int numberOfRows, int numberOfPlaces, Simulator sim) {
         this.numberOfFloors = numberOfFloors;
@@ -61,8 +63,8 @@ public class SimulatorView extends JFrame {
     public class event2 implements ActionListener {
         public void actionPerformed(ActionEvent b){
             Thread queryThread = new Thread(); {
-            sim.hundredtick();
-                }
+                sim.hundredtick();
+            }
         }
     }
 
@@ -207,45 +209,8 @@ public class SimulatorView extends JFrame {
             }
         }
 
-       // public void updateView() {
-            // Create a new car park image if the size has changed.
-         //   if (!size.equals(getSize())) {
-           //     size = getSize();
-             //   carParkImage = createImage(size.width, size.height);
-           // }
-           // Graphics graphics = carParkImage.getGraphics();
-           // for(int floor = 0; floor < getNumberOfFloors(); floor++) {
-            //    for(int row = 0; row < getNumberOfRows(); row++) {
-              //      for(int place = 0; place < getNumberOfPlaces(); place++) {
-                //        Location location = new Location(floor, row, place);
-                  //      Car car = getCarAt(location);
-                    //    Color color = car == null ? Color.white : Color.red;
-                  //      drawPlace(graphics, location, color);
-                 //   }
-             //   }
-          //  }
-        //    repaint();
-//        }
-
-        /**
-         * Paint a place on this car park view in a given color.
-         */
-  //      private void drawPlace(Graphics graphics, Location location, Color color) {
-    //        graphics.setColor(color);
-      //      graphics.fillRect(
-        //            location.getFloor() * 260 + (1 + (int)Math.floor(location.getRow() * 0.5)) * 75 + (location.getRow() % 2) * 20,
-          //          60 + location.getPlace() * 10,
-            //        20 - 1,
-              //      10 - 1); // TODO use dynamic size or constants
-    //    }
-   // }
-
-//}
-
-
         public void updateView() {
-            /* Create a new car park image if the size has changed.
-        	   added 2 colours to show the difference between the three different customer types.*/
+            // Create a new car park image if the size has changed.
             if (!size.equals(getSize())) {
                 size = getSize();
                 carParkImage = createImage(size.width, size.height);
@@ -256,19 +221,16 @@ public class SimulatorView extends JFrame {
                     for(int place = 0; place < getNumberOfPlaces(); place++) {
                         Location location = new Location(floor, row, place);
                         Car car = getCarAt(location);
-                        Color color;
-
-                        if(car == null) {
+                        Color color ;
+                        if(car == null){
                             color = Color.white;
-                        } else if(car instanceof AdHocCar && car.getIsPaying() == true)
-                        {
-                            color = Color.orange;
-                        } else if (car instanceof ParkPass){
-                            color = Color.blue;
-                        } else {
+                        } else if(car instanceof AdHocCar){
                             color = Color.red;
+                        } else if(car instanceof ParkPass){
+                            color = Color.blue;
+                        } else{
+                            color = Color.black;
                         }
-
 
                         drawPlace(graphics, location, color);
                     }
