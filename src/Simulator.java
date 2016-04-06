@@ -7,7 +7,7 @@ import java.util.Random;
 
 
 
-public class Simulator implements ParkPass {
+public class Simulator extends Car {
 
     private CarQueue entranceCarQueue;
     private CarQueue paymentCarQueue;

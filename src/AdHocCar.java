@@ -13,10 +13,10 @@
 
 
 
-public class AdHocCar extends Car implements ParkPass{
+public class AdHocCar extends Car {
 
     public AdHocCar() {
         setIsBlue(isPass);
-        setIsPaying(!isPass);
+        setIsPaying(isPaying);
     }
 }
