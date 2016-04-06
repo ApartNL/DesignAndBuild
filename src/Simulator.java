@@ -7,13 +7,13 @@ import java.util.Random;
 
 
 
-public class Simulator {
+public class Simulator implements ParkPass {
 
     private CarQueue entranceCarQueue;
     private CarQueue paymentCarQueue;
     private CarQueue exitCarQueue;
     private SimulatorView simulatorView;
-    private ParkingPass parkingPass;
+    private ParkPass parkpass;
 
 
 
@@ -40,7 +40,7 @@ public class Simulator {
     }
 
 
-
+    //method to run the simulation hundred steps
     public void hundredtick() {
         new Thread() {
             public void run() {
@@ -52,7 +52,7 @@ public class Simulator {
             }
         }.start();
     }
-
+    //method to run the simulation 1 step
     public void singletick() {
             tick();
         }
@@ -90,6 +90,8 @@ public class Simulator {
         }
 
         Random random = new Random();
+
+
 
         // Get the average number of cars that arrive per hour.
         int averageNumberOfCarsPerHour = day < 5
