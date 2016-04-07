@@ -1,13 +1,11 @@
 package Logic;
 
-import Logic.Car;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
 /**
  * @author      327278, 331048, 335364 & 343991
- * @version     01-04-2016
+ * @version     07-04-2016
  */
 
 public class CarQueue {
