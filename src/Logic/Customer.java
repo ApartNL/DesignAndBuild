@@ -1,3 +1,5 @@
+package Logic;
+
 /**
  * Created by Pascal on 5-4-2016.
  */
@@ -12,7 +14,7 @@ public class Customer {
     private String licensePlate;
 
     /**
-     * Constructor for the class Customer.
+     * Constructor for the class Logic.Customer.
      */
     public Customer(String name, String address, String postalCode, int amountOfParkingSpots, String startDate, String endDate, String eMailAddress) {
         this.name = name;
@@ -25,15 +27,15 @@ public class Customer {
     }
 
     /**
-     * Enter a new name for a Customer.
-     * @param name Declare the new name of the Customer
+     * Enter a new name for a Logic.Customer.
+     * @param name Declare the new name of the Logic.Customer
      */
     public void setCustomerName(String name) {
         this.name = name;
     }
 
     /**
-     * Retrieve the name of the Customer
+     * Retrieve the name of the Logic.Customer
      * @return Name
      */
     public String getCustomerName() {
@@ -41,15 +43,15 @@ public class Customer {
     }
 
     /**
-     * Enter a new address for a Customer.
-     * @param address Declare the new address of the Customer
+     * Enter a new address for a Logic.Customer.
+     * @param address Declare the new address of the Logic.Customer
      */
     public void setCustomerAddress(String address) {
         this.address = address;
     }
 
     /**
-     * Retrieve the address of the Customer
+     * Retrieve the address of the Logic.Customer
      * @return Address
      */
     public String getCustomerAddress() {
@@ -57,15 +59,15 @@ public class Customer {
     }
 
     /**
-     * Enter a new postalCode for a Customer
-     * @param postalCode Declare the new postalCode of the Customer
+     * Enter a new postalCode for a Logic.Customer
+     * @param postalCode Declare the new postalCode of the Logic.Customer
      */
     public void setCustomerPostalCode(String postalCode) {
         this.postalCode = postalCode;
     }
 
     /**
-     * Retrieve the postalcode of the Customer
+     * Retrieve the postalcode of the Logic.Customer
      * @return postalCode
      */
     public String getCustomerPostalCode() {
@@ -73,15 +75,15 @@ public class Customer {
     }
 
     /**
-     * Enter a new amount of parking spots for a Customer
-     * @param amountOfParkingSpots Declare the new amountOfParkingSpots of the Customer
+     * Enter a new amount of parking spots for a Logic.Customer
+     * @param amountOfParkingSpots Declare the new amountOfParkingSpots of the Logic.Customer
      */
     public void setAmountOfParkingSpots(int amountOfParkingSpots) {
         this.amountOfParkingSpots = amountOfParkingSpots;
     }
 
     /**
-     * Retrieve the amount of parking spots of the Customer
+     * Retrieve the amount of parking spots of the Logic.Customer
      * @return amountOfParkingSpots
      */
     public int getAmountOfParkingSpots() {

@@ -1,7 +1,11 @@
+package View;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import Logic.*;
+import Main.*;
 
 /**
  * @author      327278, 331048, 335364 & 343991

@@ -1,3 +1,8 @@
+package Main;
+
+import Logic.*;
+import View.*;
+
 import java.util.Random;
 
 /**

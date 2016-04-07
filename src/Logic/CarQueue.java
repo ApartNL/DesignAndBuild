@@ -1,3 +1,7 @@
+package Logic;
+
+import Logic.Car;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -8,12 +12,12 @@ import java.util.Queue;
 
 public class CarQueue {
     /**
-     * Constructor for the class CarQueue that is initialized with objects of the class Car
+     * Constructor for the class Logic.CarQueue that is initialized with objects of the class Logic.Car
      */
     private Queue<Car> queue = new LinkedList<>();
 
     /**
-     * Add a Car to the CarQueue.
+     * Add a Logic.Car to the Logic.CarQueue.
      * @param car Define the name of the car.
      * @return Add car to queue.
      */
@@ -22,7 +26,7 @@ public class CarQueue {
     }
 
     /**
-     * Remove a Car from the CarQueue.
+     * Remove a Logic.Car from the Logic.CarQueue.
      * @return Remove the first object in the list.
      */
     public Car removeCar() {

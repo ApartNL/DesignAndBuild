@@ -1,6 +1,6 @@
-// package Runner;
+package Runner;
 
-// import Main.*;
+import Main.*;
 
 /**
  * @author      327278, 331048, 335364 & 343991
@@ -9,7 +9,7 @@
 
 public class SimulatorRunner {
     public static void main(String[] args) {
-        // Simulator simulator =
+        // Main.Simulator simulator =
         new Simulator();
         // simulator.run();
     }

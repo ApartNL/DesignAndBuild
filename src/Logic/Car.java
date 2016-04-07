@@ -1,3 +1,5 @@
+package Logic;
+
 /**
  * @author      327278, 331048, 335364 & 343991
  * @version     01-04-2016
@@ -9,38 +11,38 @@ public abstract class Car {
     private boolean isPaying;
 
     /**
-     * Constructor for objects of class Car
+     * Constructor for objects of class Logic.Car
      */
     public Car() {
 
     }
 
     /**
-     * Method to retrieve the current Location of a Car.
-     * @return  The current Location of the current Car, based on the Location class.
+     * Method to retrieve the current Logic.Location of a Logic.Car.
+     * @return  The current Logic.Location of the current Logic.Car, based on the Logic.Location class.
      */
     public Location getLocation() {
         return location;
     }
 
     /**
-     * Method to set a new Location for a Car.
-     * @param location Define a new Location for the current Car (based on an existing Location).
+     * Method to set a new Logic.Location for a Logic.Car.
+     * @param location Define a new Logic.Location for the current Logic.Car (based on an existing Logic.Location).
      */
     public void setLocation(Location location) {
         this.location = location;
     }
 
     /**
-     * Method to retrieve the parking time a parked Car still has remaining.
-     * @return  The amount of parking time the current Car still has.
+     * Method to retrieve the parking time a parked Logic.Car still has remaining.
+     * @return  The amount of parking time the current Logic.Car still has.
      */
     public int getMinutesLeft() {
         return minutesLeft;
     }
 
     /**
-     * Method to change the parking time of a parked Car.
+     * Method to change the parking time of a parked Logic.Car.
      * @param minutesLeft Define the amount of minutes to set minutesLeft to.
      */
     public void setMinutesLeft(int minutesLeft) {
@@ -64,7 +66,7 @@ public abstract class Car {
     }
 
     /**
-     * Method to decrease the time a parked Car has remaining.
+     * Method to decrease the time a parked Logic.Car has remaining.
      */
     public void tick() {
         minutesLeft--;
